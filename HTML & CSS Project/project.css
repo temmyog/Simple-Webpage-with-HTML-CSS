@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: hsl(0, 0%, 100%);
+  }
+  
+  /* Got rid of some of the style declarations in the image stack */
+  .image_stack {
+    display: flex;
+    flex-direction: column;
+    background: url(./images/1.jpg) no-repeat;
+    background-size: cover;
+    height: 50vh; 
+    padding: 2rem;
+    position: relative;
+  }
+
+  /* Gave the header content a higher stack order */
+  .image_stack_content {
+    z-index: 50;
+  }
+
+  
+  /* Created a div and styled it with an id and not a class for higher style specificity because I tried styling it with a class but the (.image_stack div) selector further down the stylesheet had a higher specificity, in summary the backdrop div acts as a dark layer on top of the image to create a better contrast between the image and text  */
+  #backdrop {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: .4;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h2 {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  header button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 55%, 36%);
+    border-radius: 15px;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+  
+  header button:hover {
+    background-color: hsl(0, 73%, 37%);
+  }
+  
+  .image_stack div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0 auto;
+    /* background-color: hsl(0, 73%, 37%); */
+    width: 45%;
+    margin-top: 2rem;
+    padding-block: 1rem;
+  }
+  
+  h1 {
+    text-align: start;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: white;
+    
+  }
+  
+  .image_stack div p {
+    font-weight: 1000;
+  
+    
+  }
+  
+  .image_stack div button {
+    display: flex;
+    justify-self: center;
+    align-self: flex-start;
+    margin-top: 0.8rem;
+    border-radius: 15px;
+    background-color: hsl(197, 100%, 50%);
+    padding: 0.4rem 0.8rem;
+    border: none;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+  
+  .image_stack div button:hover {
+    background-color: hsl(198, 87%, 15%)
+  }
+  
+  .image_stack_content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .image_stack_buttons h2 {
+    text-align: center;
+    color: hsl(0, 0%, 0%);
+    font-size: 2rem;
+    margin-block: 1rem;
+  }
+  
+  .image_stack_buttons .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .image_stack_buttons .btn p:nth-child(1) {
+    background-color: hsl(197, 100%, 50%);
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .image_stack_buttons p {
+    color: hsl(195, 53%, 79%);
+    border: 1px solid hsl(195, 53%, 79%);
+    border-radius: 15px;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+  }
+  
+  .image_stack_buttons p:hover,
+  .image_stack_buttons .btn p:nth-child(1):hover {
+    background-color: hsl(195, 49%, 52%);
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Gave the images container div a max-width which prevents it from increasing beyond the specified width size and centered it with the margin property */
+    max-width: 1000px;
+    margin: 6rem auto;
+  }
+  
+  .images div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    
+  
+    /* align-items: center; */
+    width: 100%;
+  }
+  
+  .images div img {
+    width: 20%;
+  }
+  
+  .row-gap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    
+  }
+  
+  .move_image-up {
+    margin-top: -0.9rem;
+  }
+  
+  .move_image {
+    margin-top: -3rem;
+  }
+
+  .text_class {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
